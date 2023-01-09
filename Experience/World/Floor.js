@@ -10,16 +10,16 @@ export default class Floor {
   }
 
   setFloor() {
-    this.geometry = new THREE.PlaneGeometry(5, 5, 5);
+    this.geometry = new THREE.CircleGeometry(3, 32);
     this.material = new THREE.MeshStandardMaterial({
-      color: 0xffffff,
+      color: 0xf4b183,
       side: THREE.DoubleSide,
     });
-    this.plane = new THREE.Mesh(this.geometry, this.material);
-    this.plane.rotation.x = Math.PI / 2;
-    this.plane.position.y = -0.3;
-    this.plane.receiveShadow = true;
-    this.scene.add(this.plane);
+    this.circle = new THREE.Mesh(this.geometry, this.material);
+    this.circle.rotation.x = Math.PI / 2;
+    this.circle.position.y = -0.3;
+    this.circle.receiveShadow = true;
+    this.scene.add(this.circle);
   }
 
   resize() {}
