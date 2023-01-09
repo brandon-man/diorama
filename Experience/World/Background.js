@@ -1,13 +1,17 @@
 import * as THREE from "three";
 import Experience from "../Experience";
 
-export default class Controls {
+export default class Background {
   constructor() {
     this.experience = new Experience();
     this.scene = this.experience.scene;
-    this.resources = this.experience.resources;
-    this.time = this.experience.time;
-    this.camera = this.experience.camera;
+
+    this.setBackgroundColor();
+  }
+
+  setBackgroundColor() {
+    const bgColor = new THREE.Color("skyblue");
+    this.scene.background = bgColor;
   }
 
   resize() {}
