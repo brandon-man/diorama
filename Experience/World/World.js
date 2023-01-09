@@ -4,6 +4,7 @@ import Background from "./Background";
 import Floor from "./Floor";
 import Environment from "./Environment";
 import Controls from "./Controls";
+import Audio from "./Audio";
 export default class World {
   constructor() {
     this.experience = new Experience();
@@ -19,6 +20,7 @@ export default class World {
       this.background = new Background();
       this.floor = new Floor();
       this.controls = new Controls();
+      this.audio = new Audio();
     });
   }
 
